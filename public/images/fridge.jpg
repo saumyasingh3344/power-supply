@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fridgeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071B49" />
+      <stop offset="50%" stop-color="#0750C8" />
+      <stop offset="100%" stop-color="#1464F4" />
+    </linearGradient>
+    <linearGradient id="doorGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E2EEFF" />
+      <stop offset="50%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#CCE3FE" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#fridgeBg)" />
+  <circle cx="120" cy="120" r="160" fill="#55B8FF" opacity="0.1" />
+  <circle cx="680" cy="380" r="190" fill="#DCEBFF" opacity="0.08" />
+
+  <!-- Subtle Grid lines -->
+  <path d="M0 100 H800 M0 200 H800 M0 300 H800 M0 400 H800" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1"/>
+  <path d="M200 0 V500 M400 0 V500 M600 0 V500" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1"/>
+
+  <!-- Badge Text -->
+  <rect x="270" y="30" width="260" height="40" rx="20" fill="#FFFFFF" fill-opacity="0.15" stroke="#FFFFFF" stroke-opacity="0.3" />
+  <text x="400" y="55" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">REFRIGERATION EXPERTS</text>
+
+  <!-- Refrigerator Graphic -->
+  <g filter="url(#shadow)" transform="translate(280, 95)">
+    <!-- Main Refrigerator Body -->
+    <rect x="0" y="0" width="240" height="360" rx="16" fill="url(#doorGrad)" />
+    <!-- Side border line / depth -->
+    <line x1="238" y1="10" x2="238" y2="350" stroke="#0750C8" stroke-opacity="0.2" stroke-width="2"/>
+
+    <!-- Top Compartment (Freezer Door) -->
+    <rect x="10" y="10" width="220" height="120" rx="10" fill="#F0F6FF" stroke="#DCEBFF" stroke-width="2"/>
+    <!-- Freezer Handle -->
+    <rect x="25" y="70" width="8" height="45" rx="4" fill="#0750C8" />
+    <!-- Digital Temp Display -->
+    <rect x="135" y="25" width="80" height="35" rx="6" fill="#071B49" />
+    <text x="175" y="48" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#55B8FF" text-anchor="middle">-4°C</text>
+
+    <!-- Bottom Compartment (Fridge Door) -->
+    <rect x="10" y="140" width="220" height="205" rx="10" fill="#F8FAFF" stroke="#DCEBFF" stroke-width="2"/>
+    <!-- Fridge Handle -->
+    <rect x="25" y="160" width="8" height="75" rx="4" fill="#0750C8" />
+    
+    <!-- Water/Ice Dispenser -->
+    <rect x="135" y="165" width="70" height="65" rx="8" fill="#E1ECF9" stroke="#CBDCF2" stroke-width="1.5" />
+    <path d="M155 185 Q 170 175 185 185 V 205 Q 170 215 155 205 Z" fill="#55B8FF" opacity="0.6"/>
+
+    <!-- Fresh Air / Cooling Vent -->
+    <line x1="30" y1="325" x2="210" y2="325" stroke="#CBDCF2" stroke-width="3" stroke-linecap="round"/>
+    <line x1="40" y1="333" x2="200" y2="333" stroke="#CBDCF2" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Left Frost Accents -->
+  <g transform="translate(160, 240) scale(0.85)" stroke="#55B8FF" stroke-width="3" stroke-linecap="round">
+    <line x1="0" y1="-28" x2="0" y2="28"/>
+    <line x1="-24" y1="-14" x2="24" y2="14"/>
+    <line x1="-24" y1="14" x2="24" y2="-14"/>
+    <circle cx="0" cy="0" r="6" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Right Maintenance / Thermostat Badge -->
+  <g transform="translate(630, 260)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="46" fill="#FFFFFF" />
+    <circle cx="0" cy="0" r="40" fill="#1464F4" />
+    <!-- Thermometer icon -->
+    <path d="M-4 -18 V8 A 10 10 0 1 0 4 8 V-18 A 4 4 0 0 0 -4 -18 Z" fill="#FFFFFF" />
+    <path d="M-2 0 V8 A 6 6 0 1 0 2 8 V0 Z" fill="#55B8FF" />
+    <circle cx="0" cy="11" r="5" fill="#55B8FF" />
+  </g>
+
+  <!-- Cooling Particles / Sparkles -->
+  <polygon points="680,140 686,155 701,161 686,167 680,182 674,167 659,161 674,155" fill="#55B8FF" opacity="0.8"/>
+  <polygon points="120,380 124,390 134,394 124,398 120,408 116,398 106,394 116,390" fill="#DCEBFF" opacity="0.7"/>
+</svg>

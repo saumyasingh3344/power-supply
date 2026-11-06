@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071B49" />
+      <stop offset="50%" stop-color="#0750C8" />
+      <stop offset="100%" stop-color="#1464F4" />
+    </linearGradient>
+    <linearGradient id="airGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#55B8FF" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.1" />
+    </linearGradient>
+    <linearGradient id="unitGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#DCEBFF" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)" />
+  <circle cx="700" cy="80" r="180" fill="#55B8FF" opacity="0.12" />
+  <circle cx="100" cy="420" r="140" fill="#DCEBFF" opacity="0.08" />
+
+  <!-- Subtle Grid lines -->
+  <path d="M0 100 H800 M0 200 H800 M0 300 H800 M0 400 H800" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1"/>
+  <path d="M200 0 V500 M400 0 V500 M600 0 V500" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="1"/>
+
+  <!-- AC Indoor Unit -->
+  <g filter="url(#shadow)">
+    <!-- Main Body -->
+    <rect x="180" y="110" width="440" height="150" rx="20" fill="url(#unitGrad)" />
+    <!-- Vents Line -->
+    <rect x="210" y="220" width="380" height="18" rx="9" fill="#0750C8" opacity="0.85" />
+    <line x1="230" y1="229" x2="570" y2="229" stroke="#55B8FF" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Display panel -->
+    <rect x="520" y="145" width="70" height="40" rx="8" fill="#071B49" />
+    <text x="540" y="171" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#55B8FF">18°C</text>
+    <circle cx="575" cy="158" r="3" fill="#55B8FF" />
+    
+    <!-- Brand / Power LED -->
+    <circle cx="215" cy="145" r="4" fill="#00E676" />
+    <text x="230" y="149" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0750C8" letter-spacing="1">POWERSUPPLY</text>
+  </g>
+
+  <!-- Cool Air Flow Waves -->
+  <g opacity="0.75">
+    <path d="M250 250 C 270 320, 240 370, 260 430" fill="none" stroke="url(#airGrad)" stroke-width="8" stroke-linecap="round" stroke-dasharray="8 8"/>
+    <path d="M330 250 C 350 330, 310 380, 330 450" fill="none" stroke="url(#airGrad)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M400 250 C 400 340, 400 390, 400 460" fill="none" stroke="url(#airGrad)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M470 250 C 450 330, 490 380, 470 450" fill="none" stroke="url(#airGrad)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M550 250 C 530 320, 560 370, 540 430" fill="none" stroke="url(#airGrad)" stroke-width="8" stroke-linecap="round" stroke-dasharray="8 8"/>
+  </g>
+
+  <!-- Snowflake Icons for Cooling -->
+  <g transform="translate(130, 280) scale(0.9)" stroke="#55B8FF" stroke-width="3" stroke-linecap="round">
+    <line x1="0" y1="-25" x2="0" y2="25"/>
+    <line x1="-22" y1="-12" x2="22" y2="12"/>
+    <line x1="-22" y1="12" x2="22" y2="-12"/>
+    <!-- Snowflake branchlets -->
+    <path d="M-6 -18 L0 -24 L6 -18 M-6 18 L0 24 L6 18" fill="none"/>
+    <path d="M-18 -3 L-22 -12 L-13 -15 M18 3 L22 12 L13 15" fill="none"/>
+    <path d="M-18 3 L-22 12 L-13 15 M18 -3 L22 -12 L13 -15" fill="none"/>
+  </g>
+
+  <!-- Service Wrench Badge -->
+  <g transform="translate(640, 340)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="42" fill="#FFFFFF" />
+    <circle cx="0" cy="0" r="36" fill="#1464F4" />
+    <path d="M-12 -12 L6 6 M-8 -16 C-15 -13 -17 -5 -13 2 L-17 6 C-19 8 -19 11 -17 13 L-13 17 C-11 19 -8 19 -6 17 L-2 13 C5 17 13 15 16 8 C17 6 15 3 13 4 C11 5 8 5 5 2 C2 -1 2 -4 3 -6 C4 -8 1 -10 -1 -8" 
+          stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Badge Text -->
+  <rect x="280" y="30" width="240" height="40" rx="20" fill="#FFFFFF" fill-opacity="0.15" stroke="#FFFFFF" stroke-opacity="0.3" />
+  <text x="400" y="55" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">AIR CONDITIONER SERVICE</text>
+</svg>
